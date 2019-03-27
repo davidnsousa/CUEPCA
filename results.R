@@ -2,8 +2,6 @@ library(readr)
 library(ggplot2)
 require(dplyr)
 
-setwd("~/Desktop/exps N9b")
-
 #E1
 
 E1 <- read_csv("E1-table.csv", skip = 6)
@@ -23,7 +21,6 @@ p <- ggplot(E1means, aes(x = vr, y = ma, group = C)) +
   scale_color_manual(values=c("red", "blue"), labels = c("NC","C")) +
   theme_bw(base_size = 16) +
   theme(legend.position = c(0.1, 0.85), legend.title=element_blank())
-ggsave(paste0("E1",".jpg"), width = 6, height = 5)
 ggsave(paste0("E1",".eps"), width = 6, height = 5)
 
 #E2 , 3 , 4 , 5 
@@ -32,7 +29,7 @@ legendOfC = c("C0","CM","CML","CML")
 legendOfNC = c("NC0","NC0","NC0","NCML")
 for(n in c(2,3,4,5)){
 
-  En <- read_csv(paste0("E",n-1,"-table.csv"), skip = 6)
+  En <- read_csv(paste0("E",n,"-table.csv"), skip = 6)
   En <- En[,-c(1:5)]
   names(En) <- c("step","ca","nca", "t")
   
@@ -52,7 +49,6 @@ for(n in c(2,3,4,5)){
     scale_color_manual(values=c("blue", "red", "green"), labels = c(legendOfC[n-1],legendOfNC[n-1],"T")) +
     theme_bw(base_size = 16) +
     theme(legend.position = c(0.9, 0.85), legend.title=element_blank())
-  ggsave(paste0("E",n,".jpg"), width = 6, height = 5)
   ggsave(paste0("E",n,".eps"), width = 6, height = 5)
 
 }
@@ -81,6 +77,5 @@ for(value in unique(E6$vr)){
   scale_shape_discrete(labels = c("X0","CM vs NC0","CML vs NC0","XML")) +
   theme_bw(base_size = 16) +
   theme(legend.position = c(0.15, 0.8), legend.title=element_blank())
-  ggsave(paste0("E6RR",value,".jpg"), width = 6, height = 5)
   ggsave(paste0("E6RR",value,".eps"), width = 6, height = 5)
 }
