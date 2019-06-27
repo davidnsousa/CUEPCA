@@ -1,19 +1,24 @@
-# Cooperation under ecological pressure: Cognitive adaptations
+# Cooperation under ecological pressure: Cognitive adaptations (CUEPCA)
+
+Put this folder inside the Netlogo main folder.
 
 Reproducibility material:
 
-Netlogo MAS model: Cooperation under ecological pressure: Cognitive adaptations.nlogo
+```
+CUEPCA.nlogo
+```
 
-Output from behavior space: 
+All experiments (E1 to E6) in the netlogo behavior space can be run through the bash script:
 
-E1-table.csv
-E2-table.csv
-E3-table.csv
-E4-table.csv
-E5-table.csv
-E6RR1-table.csv E6RR2-table.csv
-E6RR1-table.csv
+```
+bash run.sh
+```
+The output is saved in the same folder. Use
 
-Plots with R:
+```
+Rscript results.R
+```
 
-results.R
+to produce all plots.
+
+We suggest that all experiments are run in a cluster. Please note the R dependencies in results.R.
