@@ -1,14 +1,20 @@
 # Cooperation under ecological pressure: Cognitive adaptations (CUEPCA)
 
-Put this folder inside the Netlogo main folder.
-
-Reproducibility material:
+This repositery contains all the material and intrunctions necessary to reproduce the CUEPCA's model results:
 
 ```
 CUEPCA.nlogo
+run.sh
+results.R
 ```
 
-All experiments (E1 to E6) in the netlogo behavior space can be run through the bash script:
+In the netlogo main folder type
+
+```
+git clone https://github.com/davidnsousa/CUEPCA.git; cd CUEPCA
+```
+
+All experiments (E1 to E6) in the netlogo behavior space can be run with the bash script:
 
 ```
 bash run.sh
@@ -21,4 +27,4 @@ Rscript results.R
 
 to produce all plots.
 
-We suggest that all experiments are run in a cluster. Please note the R dependencies in results.R.
+IMPORTANT NOTES: We suggest that all experiments are run in a cluster. Please note the R dependencies in results.R.
