@@ -146,7 +146,6 @@ to interact
       if memory? and not memory-full? [memorize target]
     ]
   ]
-  ;note that in repeated interactions with the same partner links and records of links in memory are not duplicated, but their are enventually subject to changes
 end
 
 to-report memory-full?
